@@ -43,11 +43,16 @@
             "prerender": true,
             "ssr": {
               "entry": "src/server.ts"
-            }
+            },
+            "localize": true
           },
           "configurations": {
+            "zh": {
+              "localize": [
+                "zh"
+              ]
+            },
             "production": {
-              "localize": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -78,6 +83,9 @@
             },
             "development": {
               "buildTarget": "ng-demo:build:development"
+            },
+            "zh": {
+              "buildTarget": "ng-demo:build:development,zh"
             }
           },
           "defaultConfiguration": "development"

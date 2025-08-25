@@ -6,7 +6,8 @@
     "start": "ng serve",
     "start:zh": "ng serve --configuration=zh",
     "build": "ng build",
-    "build:fr": "ng build --configuration=production,fr",
+    "build:locale": "ng build --localize",
+    "build:zh": "ng build --configuration=production,zh",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ng-demo": "node dist/ng-demo/server/server.mjs"

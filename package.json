@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:zh": "ng serve --configuration=zh",
     "build": "ng build",
+    "build:fr": "ng build --configuration=production,fr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ng-demo": "node dist/ng-demo/server/server.mjs"
@@ -29,6 +31,7 @@
     "@angular-devkit/build-angular": "^19.2.10",
     "@angular/cli": "^19.2.10",
     "@angular/compiler-cli": "^19.2.0",
+    "@angular/localize": "^19.2.14",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",

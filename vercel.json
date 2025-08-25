@@ -1,0 +1,31 @@
+{
+  "rewrites": [
+    {
+      "source": "/en",
+      "destination": "/browser/en"
+    },
+    {
+      "source": "/zh",
+      "destination": "/browser/zh"
+    },
+    {
+      "source": "/en/:path*",
+      "destination": "/browser/en/:path*"
+    },
+    {
+      "source": "/zh/:path*",
+      "destination": "/browser/zh/:path*"
+    },
+    {
+      "source": "/",
+      "destination": "/browser/en"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/server/(en|zh)/main.js",
+      "dest": "/server/$1/main.js"
+    }
+  ],
+  "cleanUrls": true
+}

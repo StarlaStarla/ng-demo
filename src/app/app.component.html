@@ -93,7 +93,8 @@
   }
 
   .divider {
-    min-width: 1px; /* 防止被压缩 */
+    min-width: 1px;
+    /* 防止被压缩 */
     background: var(--red-to-pink-to-purple-vertical-gradient);
     /* margin-inline: 0.5rem; */
   }
@@ -211,8 +212,9 @@
       </div>
       <h1 i18n="site header">Hello, {{ title }}</h1>
       <p i18n="@@welcome">Congratulations! Your app is running. 🎉</p>
-      <!-- <app-detail [id]="2"></app-detail> -->
+      <a [routerLink]="['/detail/1']">Crisis Center</a>
     </div>
+
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div>
@@ -251,12 +253,16 @@
           }
         </div>
         }
-        </div>
-        <div> <a [routerLink]="['/detail/1']">Crisis Center</a>
-          <router-outlet />
+      </div>
+      <router-outlet />
       </div>
     </div>
-  </div>
+  <footer>
+    <p>Footer</p>
+    <a [routerLink]="[{ outlets: { aux: ['about'] } }]">About</a>
+    <!-- <a [routerLink]="[{ outlets: { aux: ['about','security'] } }]">Security</a> -->
+    <router-outlet name="aux" />
+  </footer>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -266,5 +272,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-

@@ -2,27 +2,29 @@
   "rewrites": [
     {
       "source": "/en",
-      "destination": "/browser/en/index.*.html"
+      "destination": "/browser/en"
     },
     {
       "source": "/zh",
-      "destination": "/browser/zh/index.*.html"
+      "destination": "/browser/zh"
     },
     {
       "source": "/en/:path*",
-      "destination": "/server/en/main.*.mjs"
+      "destination": "/browser/en/:path*"
     },
     {
       "source": "/zh/:path*",
-      "destination": "/server/zh/main.*.mjs"
+      "destination": "/browser/zh/:path*"
     },
     {
       "source": "/",
-      "destination": "/browser/en/index.*.html"
-    },
+      "destination": "/browser/en"
+    }
+  ],
+  "routes": [
     {
-      "source": "/:path*",
-      "destination": "/server/en/main.*.mjs"
+      "src": "/server/(en|zh)/main.server.mjs",
+      "dest": "/server/$1/main.server.mjs"
     }
   ],
   "cleanUrls": true,

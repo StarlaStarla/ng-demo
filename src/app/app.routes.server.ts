@@ -3,7 +3,7 @@ import { PrerenderFallback, RenderMode, ServerRoute } from '@angular/ssr';
 export const serverRoutes: ServerRoute[] = [
   {
     path: '', // This renders the "/" route on the client (CSR)
-    renderMode: RenderMode.Client,
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'about', // This page is static, so we prerender it (SSG)
